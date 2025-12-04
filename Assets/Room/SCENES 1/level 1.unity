@@ -228597,7 +228597,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.936637, y: 0.9483356, z: 1.7043476}
   m_Center: {x: -0.0000000011471419, y: 0.47346082, z: 0.3293058}
@@ -245884,7 +245884,10 @@ GameObject:
   - component: {fileID: 826413767}
   - component: {fileID: 826413766}
   - component: {fileID: 826413765}
-  m_Layer: 0
+  - component: {fileID: 826413769}
+  - component: {fileID: 826413768}
+  - component: {fileID: 826413770}
+  m_Layer: 6
   m_Name: Screwdriver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245952,13 +245955,73 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826413764}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.081, y: -0.008, z: 19.422}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
+  m_LocalPosition: {x: -3.046, y: 0.887, z: 18.643}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+--- !u!114 &826413768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826413764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140307df08e042e48919af1ea80890f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  animations: []
+  others:
+  - {fileID: 1449080880}
+  states: 01000000
+  audioSource: {fileID: 0}
+  text:
+  - This tool might come in handy.
+  isDeleted: 01
+--- !u!65 &826413769
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826413764}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.03706716, y: 0.03802041, z: 0.24936041}
+  m_Center: {x: -0.000000004656613, y: -0.000000004656613, z: 0.0819851}
+--- !u!114 &826413770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826413764}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &827291251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246327,8 +246390,8 @@ GameObject:
   m_Component:
   - component: {fileID: 891484533}
   - component: {fileID: 891484534}
-  m_Layer: 0
-  m_Name: Door
+  m_Layer: 6
+  m_Name: Door2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246379,7 +246442,9 @@ GameObject:
   - component: {fileID: 894669342}
   - component: {fileID: 894669341}
   - component: {fileID: 894669340}
-  m_Layer: 0
+  - component: {fileID: 894669344}
+  - component: {fileID: 894669343}
+  m_Layer: 6
   m_Name: DoorMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246477,6 +246542,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894669338}
   m_Mesh: {fileID: 4300000, guid: 7766174711684ad4a9112ec5de742938, type: 2}
+--- !u!114 &894669343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894669338}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &894669344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894669338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140307df08e042e48919af1ea80890f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  animations:
+  - {fileID: 0}
+  - {fileID: 891484534}
+  others: []
+  states: 
+  audioSource: {fileID: 0}
+  text:
+  - This door requires a 4-digit password.
+  - I entered the password 0328 and it works.
+  isDeleted: 
 --- !u!1 &898095466
 GameObject:
   m_ObjectHideFlags: 0
@@ -247165,7 +247271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.47
+      value: 20.07
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -248027,8 +248133,11 @@ GameObject:
   - component: {fileID: 1449080879}
   - component: {fileID: 1449080878}
   - component: {fileID: 1449080877}
-  m_Layer: 0
-  m_Name: Painting_table_C
+  - component: {fileID: 1449080880}
+  - component: {fileID: 1449080882}
+  - component: {fileID: 1449080881}
+  m_Layer: 6
+  m_Name: Album
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248102,6 +248211,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 2.288, y: 178.474, z: 0}
+--- !u!114 &1449080880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449080876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140307df08e042e48919af1ea80890f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  animations: []
+  others:
+  - {fileID: 0}
+  - {fileID: 894669344}
+  states: 0000000001000000
+  audioSource: {fileID: 0}
+  text:
+  - A commemorative birthday photo... Perhaps the shooting date is written on the
+    back. I'll need a tool to pry it open.
+  - 'I opened it! The date is indeed written on the back: March 28, 2015.'
+  isDeleted: 
+--- !u!65 &1449080881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449080876}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24159013, y: 0.1884186, z: 0.12009376}
+  m_Center: {x: 7.244856e-11, y: 0.09438524, z: -0.032996453}
+--- !u!114 &1449080882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449080876}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1455464130
 GameObject:
   m_ObjectHideFlags: 0
@@ -249069,8 +249241,8 @@ MonoBehaviour:
   states: 
   audioSource: {fileID: 0}
   text:
-  - ... 'My' wife is holding a party in the next room, and for security, she has
-    set up a password. The password is 'my' birthday.
+  - It says here, 'My' wife is holding a party in the next room, and for security,
+    she has set up a password. The password is 'my' birthday.
   isDeleted: 
 --- !u!114 &1644257109
 MonoBehaviour:
@@ -249079,13 +249251,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644257103}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineColor: {r: 1, g: 0, b: 1, a: 1}
   outlineWidth: 5
   precomputeOutline: 0
   bakeKeys: []
@@ -250421,13 +250593,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2142459408}
   - component: {fileID: 2142459409}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2142459408
 Transform:
   m_ObjectHideFlags: 0
@@ -250460,7 +250632,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 8.666708, y: 12.41081, z: 10.716905}
   m_Center: {x: 3.8333538, y: -5.7054048, z: -4.8584514}
@@ -251293,12 +251465,10 @@ SceneRoots:
   - {fileID: 1580982970}
   - {fileID: 871991907}
   - {fileID: 858478484}
-  - {fileID: 1449080879}
   - {fileID: 2301}
   - {fileID: 2302}
   - {fileID: 1881076948}
   - {fileID: 2100590957}
-  - {fileID: 891484533}
   - {fileID: 1508978173}
   - {fileID: 1966918372}
   - {fileID: 2305}
@@ -251322,13 +251492,15 @@ SceneRoots:
   - {fileID: 1120723540}
   - {fileID: 1201809131}
   - {fileID: 77316268}
+  - {fileID: 1449080879}
+  - {fileID: 826413767}
+  - {fileID: 891484533}
   - {fileID: 814552096}
   - {fileID: 1937455778}
   - {fileID: 317985064}
   - {fileID: 20986218}
   - {fileID: 1220448429}
   - {fileID: 1140724381}
-  - {fileID: 826413767}
   - {fileID: 1304471353}
   - {fileID: 2069104657}
   - {fileID: 891207912}

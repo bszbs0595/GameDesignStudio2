@@ -89,13 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b15c72971574c43bc296643a45661f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textArray:
-  - "So this the room escape game.\\n I think I\u2019ll just find the key and escape."
-  - 
-  - 
   tmpText: {fileID: 3429307767658573288}
+  bg: {fileID: 0}
   stayDuration: 0
-  printSpeed: 0
 --- !u!1 &5015801764876478578
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,13 +185,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 56
+  m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
