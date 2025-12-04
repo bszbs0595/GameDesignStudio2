@@ -9,7 +9,7 @@ public class InteractableChecker : MonoBehaviour
     {
         RaycastHit hit;
         Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit,
-            1,LayerMask.GetMask("Interactable"));
+            2,LayerMask.GetMask("Interactable"));
         if (hit.collider != null)
         {
             curInteractable = hit.collider.GetComponent<Interactable>();
