@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
-    public Animator animator;
-    public string animationName;
+    public Animation animation;
     public AudioSource audioSource;
     public string text;
   
@@ -18,11 +17,11 @@ public class TriggerArea : MonoBehaviour
             GetComponent<Collider>().enabled = false;
         }
     }
-    public void Active()
+    public virtual void Active()
     {
-        if (animator != null)
+        if (animation != null)
         {
-            animator.Play(animationName);
+            animation.Play();
         }
 
         if (text != null)

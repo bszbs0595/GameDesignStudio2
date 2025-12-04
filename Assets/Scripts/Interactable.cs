@@ -28,8 +28,13 @@ public class Interactable : MonoBehaviour
         outline.enabled = false;
     }
 
-    public void Active()
+    public virtual void Active()
     {
+        if (text != null && state <= text.Length - 1 && text[state] != null)
+        {
+            DialogueManager.instance.showText(text[state]);
+        }
+
         if (animations != null && state <= animations.Length - 1 && animations[state] != null)
         {
             animations[state].Play();
@@ -40,12 +45,7 @@ public class Interactable : MonoBehaviour
             others[state].state = states[state];
         }
 
-        if (text != null && state <= text.Length - 1 && text[state] != null)
-        {
-            DialogueManager.instance.showText(text[state]);
-        }
-
-        if (state <= isDeleted.Length - 1 &&isDeleted[state])
+        if (state <= isDeleted.Length - 1 && isDeleted[state])
         {
             gameObject.SetActive(false);
         }

@@ -25,7 +25,7 @@ public class InteractableChecker : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && curInteractable)
+        if (Input.GetMouseButtonDown(0) && curInteractable)
         {
             curInteractable.Active();
         }
