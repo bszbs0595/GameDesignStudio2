@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
@@ -16,7 +17,10 @@ public class FirstPersonMovement : MonoBehaviour
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
 
 
-
+    private void Start()
+    {
+        Cursor.lockState= CursorLockMode.Locked;
+    }
     void Awake()
     {
         // Get the rigidbody on this.
