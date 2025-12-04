@@ -245477,13 +245477,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891484533}
+  - component: {fileID: 891484534}
   m_Layer: 0
-  m_Name: DoorLivingroom1ToLivingroom2
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &891484533
 Transform:
   m_ObjectHideFlags: 0
@@ -245499,7 +245500,24 @@ Transform:
   m_Children:
   - {fileID: 894669339}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -170, z: 0}
+--- !u!111 &891484534
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891484532}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: c1932ce5b1098be4598a055a4cb975a6, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c1932ce5b1098be4598a055a4cb975a6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &894669338
 GameObject:
   m_ObjectHideFlags: 0
@@ -247077,13 +247095,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1881076948}
+  - component: {fileID: 1881076949}
   m_Layer: 0
-  m_Name: DoorBedroomToLivingroom1
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1881076948
 Transform:
   m_ObjectHideFlags: 0
@@ -247100,6 +247119,23 @@ Transform:
   - {fileID: 926121367}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1881076949
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881076947}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: c1932ce5b1098be4598a055a4cb975a6, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c1932ce5b1098be4598a055a4cb975a6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1937455775
 GameObject:
   m_ObjectHideFlags: 0
@@ -247539,12 +247575,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2100590957}
   m_Layer: 0
-  m_Name: DoorBedroomToLivingroom1 (1)
+  m_Name: DoorCantOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2100590957
 Transform:
   m_ObjectHideFlags: 0
