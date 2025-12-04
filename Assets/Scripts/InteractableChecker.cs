@@ -4,12 +4,13 @@ using UnityEngine;
 public class InteractableChecker : MonoBehaviour
 {
     Interactable curInteractable;
+    public float checkDistance;
 
     private void FixedUpdate()
     {
         RaycastHit hit;
         Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit,
-            2,LayerMask.GetMask("Interactable"));
+            checkDistance,LayerMask.GetMask("Interactable"));
         if (hit.collider != null)
         {
             curInteractable = hit.collider.GetComponent<Interactable>();
