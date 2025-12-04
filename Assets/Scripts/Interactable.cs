@@ -3,18 +3,19 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public Animator animator;
-    public string animationName;
+    public int state;
+    public Animation[] animations;
+    public Interactable[] others;
+    public int[] states;
     public AudioSource audioSource;
-    public string text;
-    public bool isDeleted;
+    public string[] text;
+    public bool[] isDeleted;
 
     private Outline outline;
 
     private void Awake()
     {
         outline = GetComponent<Outline>();
-        animator = GetComponent<Animator>();
     }
 
     public void Select()
@@ -29,19 +30,24 @@ public class Interactable : MonoBehaviour
 
     public void Active()
     {
-        if (animator != null)
+        if (animations != null && state <= animations.Length - 1 && animations[state] != null)
         {
-            animator.Play(animationName);
+            animations[state].Play();
         }
 
-        if (text != null)
+        if (others != null && state <= others.Length - 1 && others[state] != null)
         {
-            DialogueManager.instance.showText(text);
+            others[state].state = states[state];
         }
 
-        if (isDeleted)
+        if (text != null && state <= text.Length - 1 && text[state] != null)
         {
-            Destroy(gameObject);
+            DialogueManager.instance.showText(text[state]);
+        }
+
+        if (state <= isDeleted.Length - 1 &&isDeleted[state])
+        {
+            gameObject.SetActive(false);
         }
     }
 }
